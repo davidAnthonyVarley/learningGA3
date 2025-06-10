@@ -32,7 +32,8 @@ runs:
         name="${{inputs.brancher_name}}"
         branch="${{inputs.branch_name}}"
         message="${name}, you have created the ${branch}!"
-
+        echo "\t message to be accessed by output in workflow${message}"
+        
         echo "output-from-script=${message}" >> $GITHUB_OUTPUT
         echo "****************"
 
