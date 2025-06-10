@@ -22,7 +22,8 @@ runs:
     - name: scriptshell
       id: script-step
       shell: bash
-      run: | 
+      run: |
+        chmod +x .github/actions/newbranch_action/newbranch_script.sh
         bash .github/actions/newbranch_action/newbranch_script.sh
 
 

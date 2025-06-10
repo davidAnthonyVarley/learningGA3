@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "****************"
 echo "hello from my composite script. you have just created a new branch"
         echo "this is your input:"
