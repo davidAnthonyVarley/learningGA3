@@ -1,6 +1,7 @@
 name: newbranch_action
 author: dvarley
 description: newbranch_action
+
 inputs:
   brancher_name:
     description: 'the name of the person making the branch'
@@ -18,7 +19,7 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    - name: script shell
+    - name: scriptshell
       id: script-shell
       shell: bash
       run: |
@@ -35,8 +36,8 @@ runs:
         echo "output-from-script=$message" >> $GITHUB_OUTPUT
         echo "****************"
 
-    - name: anotha step
-      id: anotha step
+    - name: anothastep
+      id: anothastep
       shell: bash
       run:
         echo "we can run multiple steps in this action"
