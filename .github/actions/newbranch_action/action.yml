@@ -28,11 +28,11 @@ runs:
         echo "\t${{inputs.bracher_name}}"
         echo "\t${{inputs.branch_name}}"
         echo ""
-        name='${{inputs.brancher_name}}'
-        branch='${{inputs.branch_name}}'
-        message='$name, you have created the $name branch!'
+        name="${{inputs.brancher_name}}"
+        branch="${{inputs.branch_name}}"
+        message="$name, you have created the $name branch!"
 
-        echo "output-frrom-script=$message" >> $GITHUB_OUTPUT
+        echo "output-from-script=$message" >> $GITHUB_OUTPUT
         echo "****************"
 
     - name: anotha step
