@@ -16,19 +16,19 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-
-      - name: log into docker image
+        
+      - name: setup_buildx
+        uses: docker/setup-buildx-action@v3
+      
+      - name: login
         uses: docker/login-action@v3
         with:
           username: ${{secrets.DOCKER_USERNAME}}
           password: ${{secrets.DOCKER_PAT}}
-        
-      - name: set up docker buildx
-        uses: docker/setup-buildx-action@v3
-      
-      - name: build and push docker
+
+      - name: push_docker
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tag: davidanthonyvarley/hwapp:1.0.0
+          tags: davidanthonyvarley/hwapp:1.0.0
