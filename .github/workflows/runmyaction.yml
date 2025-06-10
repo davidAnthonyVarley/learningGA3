@@ -19,5 +19,5 @@ jobs:
 
       - name: check action output
         run: |
-          echo "action produced output: ${{steps.my-action-step.outputs.output-from-script}}"
+          echo "action produced output: ${{steps.my-action-step.outputs.message}}"
           
