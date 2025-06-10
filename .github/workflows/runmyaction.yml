@@ -1,7 +1,7 @@
 name: runmyaction
 
 on:
-  push:
+  create:
 
 jobs:
   call-action:
