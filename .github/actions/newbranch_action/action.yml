@@ -31,7 +31,7 @@ runs:
         echo ""
         name="${{inputs.brancher_name}}"
         branch="${{inputs.branch_name}}"
-        message="$name, you have created the $name branch!"
+        message="${name}, you have created the ${branch}!"
 
         echo "output-from-script=$message" >> $GITHUB_OUTPUT
         echo "****************"
