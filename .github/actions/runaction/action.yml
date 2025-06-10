@@ -1,0 +1,25 @@
+name: runaction
+author: dvarley
+description: runaction
+
+on:
+  push:
+
+jobs:
+  call-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: run my action
+        uses: ./.github/actions/newbranch_action/
+        id: my-action-step
+        with:
+          brancher_name: 'david'
+          branch_name: 'new-branch'
+
+      - name: check action output
+        run: |
+          echo "action produced output: ${{steps.my-action-step.outputs.message}}"
+          

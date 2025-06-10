@@ -1,0 +1,12 @@
+name; newbranch
+
+on;
+  create;
+
+
+jobs;
+  build;
+    
+    runs-on; ubuntu-latest
+
+    steps;
