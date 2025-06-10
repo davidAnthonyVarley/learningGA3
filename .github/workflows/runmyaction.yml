@@ -1,6 +1,4 @@
-name: runaction
-author: dvarley
-description: runaction
+name: runmyaction
 
 on:
   push:
