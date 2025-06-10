@@ -26,7 +26,7 @@ runs:
         echo "****************"
         echo "hello from my composite script. you have just created a new branch"
         echo "this is your input:"
-        echo "\t${{inputs.bracher_name}}"
+        echo "\t${{inputs.brancher_name}}"
         echo "\t${{inputs.branch_name}}"
         echo ""
         name="${{inputs.brancher_name}}"
