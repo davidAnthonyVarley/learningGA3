@@ -20,7 +20,7 @@ runs:
   using: 'composite'
   steps:
     - name: scriptshell
-      id: script-shell
+      id: script-step
       shell: bash
       run: |
         echo "****************"
@@ -34,7 +34,7 @@ runs:
         message="${name}, you have created the ${branch}!"
         echo "\t message to be accessed by output in workflow${message}"
         
-        echo "message=${message}" >> $GITHUB_OUTPUT
+        echo "output-from-script=${message}" >> $GITHUB_OUTPUT
         echo "****************"
 
     - name: anothastep
